@@ -7,29 +7,19 @@ class Celula
     end
   
     def kill_celula
-      @cell_status = 'dead'
+      @cell_status = 0
     end
   
     def revive_celula
-      @cell_status = 'alive'
+      @cell_status = 1
     end
   
     def celula_status
       case @cell_status
-      when 'dead'
+      when 0
         '.'
-      when 'alive'
+      when 1
         '*'
       end
     end
-  end
-
- 
-
-
-  
- 
-  
- 
-  
-  
+  end    

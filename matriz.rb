@@ -1,3 +1,4 @@
+require_relative "celula.rb"
 class Create_Matrix 
     def initialize(height, width)
        @pers = Array.new(height){Array.new(width)}
@@ -6,16 +7,12 @@ class Create_Matrix
      
        end
        def generate_matrix
-           @height.times do |x|
-           @width.times do |y|
+            @height.times do |x|
+            @width.times do |y|
              num = rand(2)
-             @pers[x][y]= num
-             if @pers[x][y] == 1
-               print ("*")
-            
-             else
-               print (".")
-             end
+             celula = Celula.new(num)
+             @pers[x][y]= celula
+             print @pers[x][y].celula_status
            end
            puts
        end
